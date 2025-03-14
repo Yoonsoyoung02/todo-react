@@ -7,16 +7,16 @@ import "./index.css";
 async function enableMocking() {
   if (process.env.NODE_ENV === "development") {
     const { worker } = await import("./mocks/browser");
-    worker.start();
+    return await worker.start();
   }
 }
 
-enableMocking();
-
-createRoot(document.getElementById("root")!).render(
-  <StrictMode>
-    <BrowserRouter>
-      <App />
-    </BrowserRouter>
-  </StrictMode>
-);
+enableMocking().then(() => {
+  createRoot(document.getElementById("root")!).render(
+    <StrictMode>
+      <BrowserRouter>
+        <App />
+      </BrowserRouter>
+    </StrictMode>
+  );
+});

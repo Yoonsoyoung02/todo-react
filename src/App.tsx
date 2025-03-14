@@ -1,10 +1,12 @@
 import { Route, Routes } from "react-router-dom";
-import Home from "./pages/home";
+import Todos from "./pages/todos";
+import Create from "./pages/create";
 
 function App() {
   return (
     <Routes>
-      <Route path="/" element={<Home />} />
+      <Route path="/" element={<Todos />} />
+      <Route path="/create" element={<Create />} />
     </Routes>
   );
 }
