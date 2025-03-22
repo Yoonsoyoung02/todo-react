@@ -2,33 +2,26 @@ export default function Create() {
   return (
     <div
       style={{
-        position: "absolute",
-        left: "0px",
-        top: "0px",
-        width: "100vw",
-        height: "100vh",
+        width: "100%",
         display: "flex",
         justifyContent: "center",
-        alignItems: "center",
-        background: "rgba(255, 255, 255, 1)",
+        background: "#fff",
+        paddingTop: "60px",
       }}
     >
-
+      {/* 할 일 추가/수정 */}
       <div
         style={{
-          position: "relative",
           width: "666px",
-          height: "auto",
           display: "flex",
           flexDirection: "column",
-          padding: "48px 32px",
           rowGap: "10px",
-          flexWrap: "wrap",
-          alignContent: "flex-start",
           borderRadius: 8,
-          background: "#FFFFFF",
+          background: "#fff",
           boxShadow:
             "0px 1px 2px -1px rgba(0, 0, 0, 0.1), 0px 1px 3px 0px rgba(0, 0, 0, 0.1)",
+          padding: "48px 32px",
+          boxSizing: "border-box", // ✅ 박스 안쪽 패딩 고려
         }}
       >
         <h1
@@ -37,126 +30,123 @@ export default function Create() {
             fontFamily: "Roboto",
             fontSize: "36px",
             fontWeight: "600",
-            lineHeight: "28px",
-            letterSpacing: "0px",
+            lineHeight: "44px", // ✅ line-height 보정
             color: "#111827",
+            marginBottom: "24px",
           }}
         >
-          <b>할 일 추가/수정</b>
+          할 일 추가/수정
         </h1>
 
-        {/* 제목 입력 필드 */}
-        <div style={{ marginBottom: "4px", width: "100%" }}>
-          <label>제목</label>
-        </div>
-        <div>
+        {/* 제목 */}
+        <div style={{ width: "100%" }}>
+          <label style={{ fontWeight: "bold" }}>제목</label>
           <input
-            type="text"
-            placeholder="제목을 입력하세요"
+            type='text'
+            placeholder='제목을 입력하세요'
             style={{
               width: "100%",
-              height: "26px",
               padding: "8px 12px",
               border: "1px solid #ccc",
+              boxSizing: "border-box",
+              marginTop: "4px",
             }}
           />
         </div>
 
-        {/* 내용 입력 필드 */}
-        <div style={{ marginTop: "24px", width: "100%" }}>
-          <label>내용</label>
-        </div>
-        <div>
+        {/* 내용 */}
+        <div style={{ width: "100%", marginTop: "24px" }}>
+          <label style={{ fontWeight: "bold" }}>내용</label>
           <textarea
-            placeholder="내용을 입력하세요"
+            placeholder='내용을 입력하세요'
             style={{
               width: "100%",
               height: "98px",
               padding: "8px 12px",
               border: "1px solid #ccc",
+              boxSizing: "border-box",
+              marginTop: "4px",
             }}
           />
         </div>
 
-        {/* 진행상황 입력 필드 */}
-        <div style={{ marginTop: "24px", width: "100%" }}>
-          <label>진행상황</label>
-        </div>
-        <div>
+        {/* 진행상황 */}
+        <div style={{ width: "100%", marginTop: "24px" }}>
+          <label style={{ fontWeight: "bold" }}>진행상황</label>
           <input
-            type="text"
-            placeholder="시작 전"
+            type='text'
+            placeholder='시작 전'
             style={{
               width: "100%",
-              height: "26px",
               padding: "8px 12px",
               border: "1px solid #ccc",
-              marginBottom: "24px",
+              boxSizing: "border-box",
+              marginTop: "4px",
             }}
           />
         </div>
 
-        {/* 날짜 입력 필드 */}
-        <div style={{ display: "flex", gap: "16px", width: "100%" }}>
-
-          {/* 시작 날짜 */}
-          <div style={{ display: "flex", flexDirection: "column", width: "50%" }}>
-            <label>시작 날짜</label>
+        {/* 날짜 */}
+        <div
+          style={{
+            display: "flex",
+            gap: "16px",
+            width: "100%",
+            marginTop: "24px",
+          }}
+        >
+          <div style={{ flex: 1, display: "flex", flexDirection: "column" }}>
+            <label style={{ fontWeight: "bold" }}>시작 날짜</label>
             <input
-              type="date"
+              type='date'
               style={{
                 width: "100%",
-                height: "26px",
                 padding: "8px 12px",
                 border: "1px solid #ccc",
+                boxSizing: "border-box",
                 marginTop: "4px",
               }}
             />
           </div>
-
-          {/* 종료 날짜 */}
-          <div style={{ display: "flex", flexDirection: "column", width: "50%" }}>
-            <label>종료 날짜</label>
+          <div style={{ flex: 1, display: "flex", flexDirection: "column" }}>
+            <label style={{ fontWeight: "bold" }}>종료 날짜</label>
             <input
-              type="date"
+              type='date'
               style={{
                 width: "100%",
-                height: "26px",
                 padding: "8px 12px",
                 border: "1px solid #ccc",
+                boxSizing: "border-box",
                 marginTop: "4px",
               }}
             />
           </div>
         </div>
 
-        {/* 담당자 입력 필드 */}
-        <div style={{ marginTop: "24px", width: "100%" }}>
-          <label>담당자</label>
-        </div>
-        <div>
+        {/* 담당자 */}
+        <div style={{ width: "100%", marginTop: "24px" }}>
+          <label style={{ fontWeight: "bold" }}>담당자</label>
           <input
-            type="text"
-            placeholder="담당자를 입력하세요"
+            type='text'
+            placeholder='담당자를 입력하세요'
             style={{
               width: "100%",
-              height: "26px",
               padding: "8px 12px",
               border: "1px solid #ccc",
+              boxSizing: "border-box",
+              marginTop: "4px",
             }}
           />
         </div>
 
-        {/* 버튼 컨테이너 */}
+        {/* 버튼 */}
         <div
           style={{
             width: "100%",
-            height: "38px",
-            padding: "16px",
-            marginTop: "24px",
             display: "flex",
             justifyContent: "flex-end",
             gap: "10px",
+            marginTop: "32px",
           }}
         >
           <button
@@ -169,12 +159,11 @@ export default function Create() {
           >
             취소
           </button>
-
           <button
             style={{
               padding: "8px 16px",
               border: "none",
-              background: "rgba(0, 0, 0, 1)",
+              background: "#000",
               color: "white",
               cursor: "pointer",
             }}
