@@ -1,0 +1,52 @@
+.card {
+  background: #f9fafb;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  padding: 12px;
+}
+
+.cardHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cardTitle {
+  font-weight: 500;
+}
+
+.cardDate {
+  background-color: #e5e7eb;
+  color: #374151;
+  font-size: 12px;
+  font-weight: bold;
+  border-radius: 9999px;
+  padding: 4px 12px;
+}
+
+.cardDescription {
+  color: #6b7280;
+  font-size: 14px;
+  margin-top: 8px;
+}
+
+.avatarSection {
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.avatar {
+  width: 24px;
+  height: 24px;
+  border-radius: 9999px;
+  background-color: #ccc;
+  box-shadow: 0px 0px 0px 2px #fff;
+}
+
+.avatarText {
+  font-weight: 500;
+  font-size: 14px;
+  color: #6b7280;
+  margin-left: 8px;
+}

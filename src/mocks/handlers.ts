@@ -11,7 +11,7 @@ type Todo = {
   endDate: string;
   createdAt: string;
   updatedAt: string;
-  assignee: string;
+  assignees: string[];
 };
 
 let todos: Todo[] = [
@@ -24,7 +24,7 @@ let todos: Todo[] = [
     endDate: "2023-06-05",
     createdAt: "2023-06-01T09:00:00Z",
     updatedAt: "2023-06-05T16:30:00Z",
-    assignee: "김철수",
+    assignees: ["김철수", "이민호"],
   },
   {
     id: "2",
@@ -35,7 +35,7 @@ let todos: Todo[] = [
     endDate: "2023-06-15",
     createdAt: "2023-06-06T10:15:00Z",
     updatedAt: "2023-06-10T14:20:00Z",
-    assignee: "박지영",
+    assignees: ["박지영", "이민호"],
   },
   {
     id: "3",
@@ -46,7 +46,7 @@ let todos: Todo[] = [
     endDate: "2023-06-20",
     createdAt: "2023-06-10T11:30:00Z",
     updatedAt: "2023-06-10T11:30:00Z",
-    assignee: "이민호",
+    assignees: ["이민호"],
   },
 ];
 
