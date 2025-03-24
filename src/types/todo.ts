@@ -12,4 +12,13 @@ type Todo = {
   assignees: string[];
 };
 
-export type { Todo, TodoStatus };
+type TodoFormData = {
+  title: string;
+  content: string;
+  status: TodoStatus;
+  startDate: string;
+  endDate: string;
+  assignees: string[];
+};
+
+export type { Todo, TodoStatus, TodoFormData };

@@ -69,8 +69,8 @@ export const handlers = [
     }
 
     if (assignee) {
-      filteredTodos = filteredTodos.filter(
-        (todo) => todo.assignee === assignee
+      filteredTodos = filteredTodos.filter((todo) =>
+        todo.assignees.includes(assignee)
       );
     }
 
@@ -107,6 +107,8 @@ export const handlers = [
     };
 
     todos.push(todo);
+
+    console.log(todo);
 
     return HttpResponse.json(todo, { status: 201 });
   }),
